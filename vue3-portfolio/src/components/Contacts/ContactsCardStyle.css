@@ -1,0 +1,133 @@
+.contacts_Main h5
+{
+    margin-top:1rem;
+}
+
+.container.contact_container
+{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap:10%;
+    margin-top: -1rem;
+}
+
+h5
+{
+    margin-top: 1.5rem ;
+    margin-bottom: 1.5rem ;
+    text-align: center;
+}
+
+h2
+{
+    margin-top: -1rem ;
+    margin-bottom: 1.5rem ;
+    text-align: center;
+}
+
+/*=================================== CONTACT FORM ===============================*/
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    padding:.5rem;
+}
+
+input, textarea
+{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+
+}
+
+.btn-primary
+{
+    left: 100%;
+}
+
+
+/*==================================== CONTACT CARDS ==============================*/
+.contact_options
+{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.contact_option
+{
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius:1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transitions);
+}
+
+.contact_option:hover
+{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+
+.contact_option a
+{
+    margin-top: 0rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.contact_option h4
+{
+    margin: 0rem;
+}
+.contact_option h5
+{
+    margin: 0rem;
+}
+
+.email_text
+{
+    font-size: 10px;
+}
+
+
+/*____________Media Queries____________*/
+
+/*____Medium Devices____*/
+
+@media screen and (max-width: 1024px)
+{
+    .container.contact_container
+    {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/*____Small Devices____*/
+
+
+@media screen and (max-width: 780px)
+{
+    .container.contact_container
+    {
+        margin-bottom: 4rem;
+        width: var(--container-width-sm);
+    }
+
+    form
+    {
+        margin: 0
+    }
+}

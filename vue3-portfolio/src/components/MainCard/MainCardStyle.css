@@ -1,0 +1,112 @@
+header
+{
+    height: 80vh;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.header_container
+{
+    text-align: center;
+    padding-top: 5rem;
+    height: 100%;
+    position: relative;
+}
+
+/*____________CALL TO ACTION____________*/
+
+.cta
+{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+
+/*____________HEADER SOCIALS____________*/
+
+.header_socials
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: absolute;
+    right: 0;
+    bottom: 5rem;
+}
+
+/* Add line*/
+.header_socials::after
+{
+    content:"";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+    margin-left: 8px;
+}
+
+
+/*____________Scroll Down____________*/
+
+.scroll_down
+{
+    position: absolute;
+    left: -2.3rem;
+    bottom: 8rem;
+    transform: rotate(-90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+/*____________Media Queries____________*/
+
+/*____Medium Devices____*/
+
+@media screen and (max-width: 1024px)
+{
+    header
+    {
+        height: 80vh;
+    }
+}
+
+/*____Small Devices____*/
+
+@media screen and (max-width: 780px)
+{
+    header
+    {
+        margin-top: -3rem;
+        height: 65vh;
+    }
+    .header_socials, .scroll_down
+    {
+        display: none;
+    }
+
+    .header_socials
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        position: absolute;
+        right: 20%;
+        bottom: 6rem;
+    }
+
+    .header_socials::after
+{
+    content:"";
+    width: 1px;
+    height: 2rem;
+    background: none;
+    margin-left: 8px;
+}
+
+    
+}

@@ -1,0 +1,169 @@
+/*
+#191308
+#322A26
+#454b66
+#677db7
+#9ca3db
+*/
+
+:root{
+/*Color Presets */
+--color-bg: #2B4865;
+--color-bg-variant: #20364e;
+--color-primary: #8FE3CF;
+--color-primary-variant:#256D85;
+--color-white: #fff;
+--color-light:rgba(255,255,255,0.6);
+--transition: all 400ms ease;
+
+/*container width adjustments*/
+--container-width-lg:75%;
+--container-widht-md:86%;
+--container-width-sm:90%
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+}
+
+/*____________General Styles____________*/
+
+.container
+{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5
+{
+    font-weight: 500;
+}
+
+h1
+{
+    font-size:  2.5rem;
+}
+
+section
+{
+    margin-top: 8rem;
+}
+
+section > h2, section >h5
+{
+text-align: center;
+color: var(--color-light);
+}
+
+section > h2
+{
+    color: var var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.text-light
+{
+    color: var(--color-light);
+}
+
+a
+{
+    color:var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover
+{
+    color:var(--color-white);
+}
+
+.btn
+{
+    background-color: transparent;
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding : 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    border: 1.5px solid var(--color-primary);
+    transition:var(--transition);
+}
+
+.btn:hover
+{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary
+{
+    width: max-content;
+    display: inline-block;
+    padding : 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--color-primary);
+    transition:var(--transition);
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+.btn-primary:hover
+{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+img
+{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*____________Media Queries____________*/
+
+/*____Medium Devices____*/
+
+@media screen and (max-width: 1024px)
+{
+    .container
+    {
+        width: var(--container-widht-md);
+    }
+    
+    section
+    {
+        margin-top: 6rem;
+    }
+}
+
+/*____Small Devices____*/
+
+@media screen and (max-width: 780px)
+{
+    .container
+    {
+        width: var(--container-width-sm);
+    }
+    
+    section > h2
+    {
+        margin-top: 2rem;
+    }
+}

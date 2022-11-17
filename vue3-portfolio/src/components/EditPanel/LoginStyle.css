@@ -1,0 +1,43 @@
+.columns
+{
+    display: grid;
+    grid-template-columns: 50% 46.5%;
+    gap: 20%;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+
+}
+
+.column-rigth
+{
+
+    margin-top: 25%;
+    display: block;
+    text-align: 50%;
+}
+
+.column-left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: 50%;
+
+    background: var(--color-bg-variant);
+    transition: var(--transition);
+}
+
+.log_input
+{
+    margin-bottom: 1rem;
+}
+
+button
+{
+   margin: 1rem 45%
+}
+
+
