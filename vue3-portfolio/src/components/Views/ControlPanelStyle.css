@@ -1,0 +1,11 @@
+.main_container
+{
+    display: grid;
+    grid-template-columns: 10% 80%;
+    gap: 10%;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}

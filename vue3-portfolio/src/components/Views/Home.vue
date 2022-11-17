@@ -1,19 +1,48 @@
 <template>
-    <MainCard/>
+<div>
+  <NavComponent/>
 
-  </template>
+  <router-view v-slot="{ Component, route }">
+            <transition enter-active-class="animate__animated animate__fadeInUp" 
+            leave-active-class="animate__animated animate__fadeOutUp"
+            vmode="out-in"
+            >
+                  <component :is="Component" :key="route.path" />
+            </transition>
+      </router-view>
+</div>
+ </template>
   
   <script>
-  import MainCard from '../MainCard/MainCard.vue';
+
+  import NavComponent from '../nav/NavComponent.vue'
 
 
   export default {
     name: 'App',
     components: {
-      MainCard,
+      NavComponent
     },
 
 
 
   }
   </script>
+
+  
+<style>
+/*=====================COMPONENT TRANSITIONS=============*/
+
+.fade-enter-from,
+.fade-leave-to
+{
+      opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active
+{
+      transition: opacity 0.5s ease-out;
+}
+
+</style>

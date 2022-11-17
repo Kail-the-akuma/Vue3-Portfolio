@@ -30,7 +30,7 @@
 
        <div className="column-left">
 
-        <h2>Right Place</h2>
+        <h2>Are you sure you are in the right place?</h2>
       </div>
         
       </div>    

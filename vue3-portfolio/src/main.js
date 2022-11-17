@@ -11,6 +11,7 @@ import { BiGithub, BiLinkedin,BiBehance,FaItchIo,
         CoUnity,CoUnrealEngine,CoBlender,CoKrita,
         SiAdobeillustrator,SiAdobephotoshop,SiAdobexd,SiAdobepremierepro,SiAdobeaftereffects,
         MdEmailOutlined,FaFacebookMessenger,FaWhatsapp,
+        FaAngleRight,FaAngleLeft,
         } from "oh-vue-icons/icons";
 
 
@@ -23,6 +24,7 @@ addIcons(BiGithub, BiLinkedin,BiBehance,FaItchIo,
         CoUnity,CoUnrealEngine,CoBlender,CoKrita,
         SiAdobeillustrator,SiAdobephotoshop,SiAdobexd,SiAdobepremierepro,SiAdobeaftereffects,
         MdEmailOutlined,FaFacebookMessenger,FaWhatsapp,
+        FaAngleRight,FaAngleLeft,
         );
 
 import "@/styles/global.css"
