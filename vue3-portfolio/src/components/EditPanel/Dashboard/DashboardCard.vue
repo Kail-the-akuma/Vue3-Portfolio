@@ -1,9 +1,9 @@
 <template>
   
-  <div ClassName="dash_Main">
-    <h1>Hi</h1>
+  <div className="container edit-dash">
+        <h1> Dash</h1>
 
-   </div>
+    </div>
 
 
 </template>

@@ -1,8 +1,17 @@
 <template>
 	<div class="sidebar">
 
-        <router-link class="sidebar_icon" to="/control-panel/dash">
+        <router-link v-bind:class="['nav_element',{'router-link-active' : isActive}]" to="/control-panel/dash">
             <v-icon name="fa-angle-right"/>
+        </router-link>
+        <router-link v-bind:class="['nav_element',{'router-link-active' : isActive}]" to="/control-panel/edit-portfolio">
+            <v-icon name="gi-console-controller"/>
+        </router-link>
+        <router-link v-bind:class="['nav_element',{'router-link-active' : isActive}]" to="/control-panel/edit-experience">
+            <v-icon name="fa-pen-nib"/>
+        </router-link>
+        <router-link class="back-home" to="/">
+            <v-icon name="fa-home"/>
         </router-link>
 
 
@@ -10,16 +19,10 @@
 </template>
 
 <script>
-import {collapsed, toggleSidebar, sidebarWitdth} from './state'
 
 
 export default{
 
-    props:{},
-
-    setup(){
-        return {collapsed, toggleSidebar, sidebarWitdth}
-    },
 
 }
 
@@ -45,16 +48,31 @@ export default{
     display: flex;
     flex-direction: column;
 }
-
-.sidebar_icon
+.nav_element
 {
-    position: aabsolute;
-    bottom: 0;
-    padding: .75em;
-    color: rgba(255,255,255,0.7);
-
-    transition: 0.2s linear;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.router-link-active
+{
+    display: flex;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
+.nav_element:hover
+{
+    background :rgba(0,0,0,0.3);
+}
+
+.back-home
+{
+    position: fixed;
+    z-index: 1;
+    bottom: 1rem;
+    padding: .5rem;
+}
 
 </style>

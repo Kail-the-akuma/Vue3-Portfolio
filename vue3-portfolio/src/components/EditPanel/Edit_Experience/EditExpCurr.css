@@ -1,0 +1,56 @@
+.skills_Main
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.Professional_Table
+{
+    border-collapse: collapse;
+    font-size: .9em;
+    min-width: 50rem;
+    margin: 2rem 0;
+    border-radius: .5rem .5rem 0 0 ;
+    overflow: hidden;
+
+    box-shadow:  0 .5rem 1rem var(--color-bg-variant);
+}
+.Professional_Table thead tr
+{
+ background-color: var(--color-primary);
+ color:var(--color-bg);
+ text-align: center;
+ font-weight: bold;   
+}
+
+.Professional_Table th
+.Professional_Table td
+{
+    padding: 12px 15px;
+}
+
+.Professional_Table tbody tr
+{
+    border-bottom: 1px solid #dddddd;
+}
+
+.Professional_Table tbody tr:nth-of-type(even)
+{
+    background-color: var(--color-bg-variant);
+}
+.Professional_Table tbody tr:nth-last-of-type
+{
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.Professional_Table tbody tr.active-row
+{
+    font-weight: bold;
+    color:var(--color-primary)
+}
+
+.skills_Main
+{
+    margin-left:5rem
+}

@@ -13,6 +13,8 @@ import Login from '../components/Views/LogIn.vue'
 
 import ControlPanel from '../components/Views/ControlPanel.vue'
 import DashBoard from '../components/EditPanel/Dashboard/DashboardCard.vue'
+import EditPortfolio from '../components/EditPanel/EditPortfolio/EditPortfolio.vue'
+import  EditExperience from '../components/EditPanel/Edit_Experience/EditExperience.vue'
 
 
 const routes = [
@@ -34,7 +36,17 @@ const routes = [
                 path:'/control-panel/dash',
                 name:'Dashboard',
                 component:DashBoard,
-            }
+            },
+            {
+                path:'/control-panel/edit-portfolio',
+                name:'Edit-Portfolio',
+                component:EditPortfolio,
+            },
+            {
+                path:'/control-panel/edit-experience',
+                name:'Edit-Experience',
+                component:EditExperience,
+            },
         ]
     },
     

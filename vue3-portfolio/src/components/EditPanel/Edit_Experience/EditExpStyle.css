@@ -1,0 +1,136 @@
+.edit-experience
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.edit_exp-options
+{
+    display: grid;
+    grid-template-columns: 35% 40%;
+    gap:25%;
+      
+}
+.animate__animated.animate__slideInLeft
+{
+ 
+    box-shadow:  1rem 0 1rem 0 var(--color-bg-variant);
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 2rem 0;
+
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+
+}
+.exp_input
+{    
+    width: 50%;
+    margin: 0 1rem;
+
+}
+
+.exp_input-content
+{    
+    width: 50%;
+    padding-left: 15rem;
+
+}
+
+.addExp_Form-inputs
+{
+    display: grid;
+    grid-template-columns: repeat(8,.5fr);    
+    gap:0rem;
+}
+
+.addExp_Form-textAreas
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);    
+    gap:0rem;
+}
+
+.addExp_Form-textAreas label
+{
+    margin-top: 10%;
+
+}
+
+.addExp_Form-textAreas input
+{
+    margin-left: -5rem;
+    min-width: 25rem;
+}
+
+.addExp_Form-inputs input
+{
+    height: 0rem;
+}
+.addExp_Form-inputs label
+{
+    margin-top: 10%;
+    margin-right: -2rem;
+}
+
+.addExp_Form-inputs select
+{
+    min-width: 200px;
+
+}
+
+.btn-delete
+{
+    background-color: transparent;
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding : 0 1rem;
+    border-radius: 0.4rem;
+    border: 1.5px solid var(--color-primary);
+    transition:var(--transition);
+}
+.btn-delete:hover
+{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+@media screen and (max-width: 780px)
+{
+    .edit_exp-options
+    {
+        display: grid;
+        grid-template-columns: repeat(2fr);
+        gap:20%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .edit-experience
+    {
+       margin-left: 10%;
+    }
+    .addExp_Form-inputs
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .addExp_Form-inputs label
+    {
+        margin-top: auto;
+
+    }
+    .exp_input
+    {    
+        width: auto;
+
+    }
+
+
+
+
+}

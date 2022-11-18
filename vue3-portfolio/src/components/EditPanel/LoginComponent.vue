@@ -65,7 +65,7 @@
           signInWithEmailAndPassword(auth,this.email, this.password)
           .then(() => {
             alert('Successfully logged in');
-            this.$router.push('/control-panel')
+            this.$router.push('/control-panel/dash')
           })
           .catch(error => {
             alert(error.message);

@@ -17,7 +17,9 @@
           <ul className='skill_list proffesional' >
             <li v-for="p in professionalList" :key="p.id">
               <v-icon name="md-workoutline" className='skill_list-icon'/>
-              <p >{{p.content}}</p>
+              <p >
+                {{p.startYear}} - {{p.endYear}} - {{p.jobTitle}} - {{p.jobPlace}}
+              </p>
            </li>
           </ul>
       </article>
@@ -31,7 +33,9 @@
           <ul className='skill_list academic'>
             <li v-for="ac in academicsList" :key="ac.id">
               <v-icon name="la-book-solid" className='skill_list-icon'/>
-              <p >{{ac.content}}</p>
+              <p>
+                {{ac.jobTitle}}
+              </p>
            </li>
           </ul>
 
@@ -47,7 +51,9 @@
         <ul className='skill_list awards'>
             <li v-for="aw in awardsList" :key="aw.id">
               <v-icon name="fa-award" className='skill_list-icon'/>
-              <p >{{aw.content}}</p>
+              <p >
+                {{aw.endYear}} - {{aw.jobTitle}} - {{aw.jobPlace}}
+              </p>
            </li>
           </ul>
       </article>
@@ -115,15 +121,10 @@ export default{
       
       let fbAcademics = []
 
-      queryAcademics.forEach((doc) => {
+      queryAcademics.forEach((ac) => {
 
-        const ac ={
-           id: doc.id,
-          content:doc.data().content
-        }
-
-        fbAcademics.push(ac)
-
+        fbAcademics.push(ac.data())
+       
       });
 
       this.academicsList = fbAcademics
@@ -134,15 +135,9 @@ export default{
       
       let fbAwards = []
 
-      queryAwards.forEach((doc) => {
+      queryAwards.forEach((aw) => {
 
-
-        const aw ={
-           id: doc.id,
-          content:doc.data().content
-        }
-
-        fbAwards.push(aw)
+        fbAwards.push(aw.data())
       });
 
       this.awardsList = fbAwards
