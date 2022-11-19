@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { getAuth, onAuthStateChanged} from 'firebase/auth';
+
+import BaseCard from '../components/Views/BasePanel.vue'
+
 import Home from '../components/Views/Home.vue'
 import MainCard from '../components/MainCard/MainCard.vue';
 import AboutCard from '../components/About/AboutCard.vue';
@@ -18,90 +21,101 @@ import  EditExperience from '../components/EditPanel/Edit_Experience/EditExperie
 
 
 const routes = [
-    {
-        path: '/login',
-        name: 'login',
-        component: Login
-    },
-
-    {
-        path: '/control-panel',
-        name: 'ControlPanel',
-        component: ControlPanel,
-        meta:{
-            requiresAuth:true,
-        },
-        children:[
-            {
-                path:'/control-panel/dash',
-                name:'Dashboard',
-                component:DashBoard,
-            },
-            {
-                path:'/control-panel/edit-portfolio',
-                name:'Edit-Portfolio',
-                component:EditPortfolio,
-            },
-            {
-                path:'/control-panel/edit-experience',
-                name:'Edit-Experience',
-                component:EditExperience,
-            },
-        ]
-    },
     
-    /*================================HOME ROUTES===================*/
     {
-        path: '/none',
-        name: '',
-        component: Home,
-  
+        path:'/base',
+        name: 'BaseCard',
+        component: BaseCard,
         children:[
-            {           
-            path: '/',
-            name: 'Welcome',
-            component: MainCard,
-            },
-
+           
             {
-                path: '/about',
-                name: 'About',
-                component: AboutCard
+                path: '/login',
+                name: 'login',
+                component: Login
             },
         
             {
-                path: '/skills',
-                name: 'Skills',
-                component: SkillsCard
-            },
-        
-            {
-                path: '/experience',
-                name: 'Experience',
-                component: ExperienceCard
-            },
-        
-            {
-                path: '/portfolio',
-                name: 'Portfolio',
-                component: PortfolioCard
-            },
-        
-        
-            {
-                path: '/contacts',
-                name: 'Contacts',
-                component: ContactCard
+                path: '/control-panel',
+                name: 'ControlPanel',
+                component: ControlPanel,
+                meta:{
+                    requiresAuth:true,
+                },
+                children:[
+                    {
+                        path:'/control-panel/dash',
+                        name:'Dashboard',
+                        component:DashBoard,
+                    },
+                    {
+                        path:'/control-panel/edit-portfolio',
+                        name:'Edit-Portfolio',
+                        component:EditPortfolio,
+                    },
+                    {
+                        path:'/control-panel/edit-experience',
+                        name:'Edit-Experience',
+                        component:EditExperience,
+                    },
+                ]
             },
             
+            /*================================HOME ROUTES===================*/
             {
-                path: '/footer',
-                name: 'footer',
-                component: FooterComponent
-            },
+                path: '/none',
+                name: '',
+                component: Home,
+          
+                children:[
+                    {           
+                    path: '/',
+                    name: 'Welcome',
+                    component: MainCard,
+                    },
         
+                    {
+                        path: '/about',
+                        name: 'About',
+                        component: AboutCard
+                    },
+                
+                    {
+                        path: '/skills',
+                        name: 'Skills',
+                        component: SkillsCard
+                    },
+                
+                    {
+                        path: '/experience',
+                        name: 'Experience',
+                        component: ExperienceCard
+                    },
+                
+                    {
+                        path: '/portfolio',
+                        name: 'Portfolio',
+                        component: PortfolioCard
+                    },
+                
+                
+                    {
+                        path: '/contacts',
+                        name: 'Contacts',
+                        component: ContactCard
+                    },
+                    
+                    {
+                        path: '/footer',
+                        name: 'footer',
+                        component: FooterComponent
+                    },
+                
+                ]
+            },
         ]
-    },
+    }
+ 
+
 
    
 

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <section id='skills' className='skills_Main'>
+  <div id='skills' >
     
     <h5>What have I done so far</h5>
     <h2 className='skills_title'>My Background</h2>
@@ -59,7 +58,7 @@
       </article>
 
     </div>
-  </section>
+
   </div>
  
 

@@ -1,13 +1,12 @@
-.skills_Main{
-    margin-top: 2.5rem;
-}
+
 
 .skills_container
 {
     padding-top: -1rem;
+    margin-right: -2rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap:2rem;
+    gap:1rem;
 }
 
 .skills_title

@@ -53,9 +53,8 @@
 
                     <h3>{{d.Title}}</h3>
 
-                    <div className='portfolio_item-cta'>
+                    <div className='portfolio_item-cta2'>
                         <a v-bind:href="d.btn_1link" className='btn ' target='_blank'>{{d.btn_1text}}</a>
-                        <a v-bind:href="d.btn_2link" className='btn btn-primary' target='_blank'>{{d.btn_2text}}</a>                    
                     </div>
                 </article>
             </div>

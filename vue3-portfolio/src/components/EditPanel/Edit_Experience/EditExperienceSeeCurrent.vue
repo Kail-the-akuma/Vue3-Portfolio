@@ -164,20 +164,21 @@
       {
 
         deleteDoc(doc(db, "e_Proffesional", id));
-
+        alert('Deleted Element from Proffesional');
       },
 
       deleteRowAc( id)
       {
           
         deleteDoc(doc(db, "e_Academics", id));
-
+        alert('Deleted Element from Academics');
       },
 
       deleteRowAw( id)
       {
           
         deleteDoc(doc(db, "e_Awards", id));
+        alert('Deleted Element from Awards');
 
       }
 

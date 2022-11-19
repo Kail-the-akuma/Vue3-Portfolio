@@ -1,10 +1,13 @@
 header
 {
     height: 80vh;
-    padding-top: 2rem;
+    padding-top: 0rem;
     overflow: hidden;
 }
-
+.to
+{
+    margin: 0;
+}
 .header_container
 {
     text-align: center;
@@ -95,10 +98,10 @@ a:link{
     {
         display: flex;
         flex-direction: row;
-        gap: 1.2rem;
+        gap: 1.5rem;
         position: absolute;
-        right: 30%;
-        bottom: 6rem;
+        right: 20%;
+        bottom: 10rem;
     }
 
     .header_socials::after
@@ -107,7 +110,7 @@ a:link{
     width: 1px;
     height: 2rem;
     background: none;
-    margin-left: 8px;
+    margin-left: 0;
 }
 
     

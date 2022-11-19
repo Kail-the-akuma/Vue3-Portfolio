@@ -8,6 +8,8 @@
 
         <h1>Hugo Garelha</h1>
 
+        <router-link  to="/login" className="to"> <h4> ... </h4></router-link>
+        
         <h5 className='text-light'>Welcome to my Portfolio in Vue.JS</h5>
 
         <CTA/>
@@ -25,7 +27,6 @@
 <script>
 
 import "./MainCardStyle.css"
-
 import SocialLinks from './SocialLinks.vue';
 import CTA from './CTA.vue';
 
